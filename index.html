@@ -67,6 +67,11 @@
   </header>
 
   <main class="col-lg-10 offset-lg-1 mt-5">
+    <div id="msg" class="d-none alert alert-success alert-dismissible fade show" role="alert">
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      <strong>USUÁRIO CADASTRADO</strong>
+    </div>
+    
     <section id="banner-topo" class="d-none d-md-block">
       <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
         <ol class="carousel-indicators">
@@ -74,6 +79,7 @@
             aria-label="First slide"></li>
           <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
           <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>
+          <li data-bs-target="#carouselId" data-bs-slide-to="3" aria-label="Four slide"></li>
         </ol>
         <div class="carousel-inner" role="listbox">
           <div class="carousel-item active">
@@ -99,6 +105,13 @@
               <p>Description</p>
             </div>
           </div>
+          <div class="carousel-item">
+            <img src="./imagens/banner-topo-floresta.jpg" class="w-100 d-block kenburns-bottom-right"
+              alt="Third slide" />
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Title</h3>
+              <p>Description</p>
+            </div>
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
@@ -295,7 +308,7 @@
         </fieldset>
 
         <p class="m-0 mt-2">Sua idade: <span id="txt-idade" class="fw-bold"></span></p>
-        <input type="range" class="form-range" id="idade" name="idade" value="18" min="0" max="90">
+        <input type="range" class="form-range" id="idade" name="idade" value="" min="0" max="90">
 
         <div class="mb-3">
           <label for="telefone" class="form-label">Seu Telefone:</label>
@@ -383,6 +396,7 @@
 
 
   <a href="#" id="go-top" class="seta-topo"><i class="fas fa-arrow-up"></i></a>
+  
 
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
@@ -398,7 +412,13 @@
   
   <script src="js/custom.js"></script>
 
-  
+  <script>
+    var alertList = document.querySelectorAll('.alert');
+    alertList.forEach(function (alert) {
+      new bootstrap.Alert(alert)
+    })
+  </script>
+
 </body>
 
 </html>
