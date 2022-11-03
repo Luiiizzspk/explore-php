@@ -29,7 +29,7 @@ const monstraData = ()=> {
   let mes = dataAtual.getMonth() + 1
   let ano = dataAtual.getFullYear()
   let hora = dataAtual.getHours()
-  let valor = dia +'/'+ mes + '/' + ano + ' - ' + hora
+  let valor = dia +'/'+ mes + '/' + ano 
 
   document.getElementById('dt-cadastro').value = valor
 }
